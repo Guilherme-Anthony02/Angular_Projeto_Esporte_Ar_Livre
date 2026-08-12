@@ -1,0 +1,31 @@
+#cabecalho,
+#logo,
+#menu-ul {
+    display: flex;
+    align-items: center;
+}
+
+#logo,
+#menu-ul {
+    justify-content: center;
+}
+
+#cabecalho {
+    width: 1000px;
+    height: 150px;
+    margin: 20px auto;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 790px;
+    height: 150px;
+    list-style: none;
+    justify-content: right;
+}
+
+.lnk-menu{
+    text-decoration: none;
+    padding: 0px 20 px;
+}
