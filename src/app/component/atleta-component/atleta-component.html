@@ -1,0 +1,38 @@
+<div id="div-form">
+    <h2>Cadastro Atleta</h2>
+    
+    <form id="form-atleta">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" class="input01" required maxlength="80" placeholder="Informe seu nome">
+
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" class="input02" required maxlength="80" placeholder="Informe seu CPF">
+
+        <label for="sexo">sexo</label>
+        <input type="radio" name="sexo" id="sexoM" class="btnSelecao" value="M"> Masculino
+        <input type="radio" name="sexo" id="sexoF" class="btnSelecao" value="F"> Feminino
+        <input type="radio" name="sexo" id="sexoN" class="btnSelecao" value="N"> Prefere não declarar
+
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" class="input02" required maxlenght="9" placeholder="Informe seu CEP">
+
+        <label for="rua-logradouro">Rua/Logradouro</label>
+        <input type="text" name="rua-logradouro" id="rua-logradouro" class="input01" required maxlenght="9"
+        placeholder="Informe sua rua/logradouro">
+
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro" id="bairro" class="input02" required maxlenght="20" placeholder="Informe seu Bairro">
+
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade" class="input02" required maxlenght="60" placeholder="Informe sua Cidade">
+
+        <label for="uf">UF</label>
+        <input type="text" name="uf" id="uf" class="input02" required maxlenght="2" placeholder="Informe seu UF">
+
+        <div id="div-btns">
+            <button type="submit" id="btnAdd">Cadastrar Atleta</button>
+            <button type="reset" id="btnLimpar">Limpar</button>
+        </div>
+    </form>
+
+</div>
