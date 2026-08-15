@@ -49,9 +49,9 @@ export class AtletaComponent {
 
     limparAtributos() {
       this.nome = ''
-      this.cpf = 0
+      this.cpf = ''
       this.sexo = ''
-      this.cep = 0
+      this.cep = ''
       this.ruaLogradouro = ''
       this.bairro = ''
       this.cidade = ''

@@ -2,8 +2,8 @@ export class Pessoa{
     id: number = 0
     nome: string = ''
     sexo: string = ''
-    cpf: number = 0
-    cep: number = 0
+    cpf: string = ''
+    cep: string = ''
     ruaLogradouro: string = ''
     bairro: string = ''
     cidade: string = ''
