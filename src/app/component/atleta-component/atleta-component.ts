@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { Component, ChangeDetectorRef } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+
 import { AtletaService } from '../../service/atleta-service';
 import { Atleta } from '../../models/Atleta';
-import { ChangeDetectorRef } from '@angular/core/types/_discovery-chunk';
-import { ActivatedRoute } from '@angular/router/types/_router_module-chunk';
-import { Injector } from '../../../../node_modules/@angular/core/types/_chrome_dev_tools_performance-chunk';
+
 
 
 @Component({
   selector: 'app-atleta-component',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './atleta-component.html',
   styleUrl: './atleta-component.css',
