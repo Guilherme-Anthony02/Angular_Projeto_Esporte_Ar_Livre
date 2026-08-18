@@ -1,7 +1,7 @@
 <div id="div-form">
     <h2>Cadastro Atleta</h2>
     
-    <form id="form-atleta" (submit)="salvarAtleta()">
+    <form id="form-atleta" (ngSubmit)="enviaDadosAtleta()">
         <label for="nome">Nome</label>
         <input type="text" name="nome" [(ngModel)] = "nome" id="nome" class="input01" required maxlength="80" placeholder="Informe seu nome">
 
