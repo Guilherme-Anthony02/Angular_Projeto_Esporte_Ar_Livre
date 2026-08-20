@@ -1,7 +1,7 @@
 <div id="div-form">
     <h2>Cadastro de Corrida</h2>
 
-    <form id="form-corrida">
+    <form id="form-corrida" (submit)='dadosFormulario()'>
         <label for="descricao-corrida">Descrição da Corrida</label>
         <textarea name="descricao" id="descricao" [(ngModel)] = "descricaoCorrida"></textarea>
 
@@ -9,9 +9,9 @@
         <input type="date" name="data-corrida" id="data-corrida" [(ngModel)] = "data">
 
         <label for="distancia">Distâncias Disponíveis</label>
-        <input type="radio" id="5km" name="distancia" value="5km" [(ngModel)] = "distancia"> 5km
-        <input type="radio" id="10km" name="distancia" value="10km" [(ngModel)] = "distancia"> 10km
-        <input type="radio" id="25km" name="distancia" value="25km" [(ngModel)] = "distancia"> 25km
+        <input type="radio" id="5km" name="distancia" value="5KM" [(ngModel)] = "distancia5km"> 5km
+        <input type="radio" id="10km" name="distancia" value="10KM" [(ngModel)] = "distancia10km"> 10km
+        <input type="radio" id="25km" name="distancia" value="25KM" [(ngModel)] = "distancia25km"> 25km
 
         <div id="div-btns">
             <button type="submit" id="btnAdd">Cadastrar Corrida</button>
