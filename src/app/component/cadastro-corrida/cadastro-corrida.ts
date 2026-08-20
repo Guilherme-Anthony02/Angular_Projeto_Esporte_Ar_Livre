@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Corrida } from '../../models/corrida';
+import { Corrida } from '../../models/Corrida';
 import { CorridaService } from '../../service/corrida-service';
+
 
 @Component({
   selector: 'app-cadastro-corrida',
