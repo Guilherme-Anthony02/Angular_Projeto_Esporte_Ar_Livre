@@ -12,6 +12,8 @@ import { CorridaService } from '../../service/corrida-service';
   templateUrl: './inscricao.html',
   styleUrls: ['./inscricao.css'],
 })
+
+//DECLARAÇÃO DOS ATRIBUTOS DO COMPONENT
 export class Inscricao {
   atletas: Atleta[] = [];
   corridas: Corrida[] = [];
@@ -40,7 +42,5 @@ export class Inscricao {
     });
   }
 
-  enviaDadosInscricao() {
-    console.log('Inscrição enviada');
-  }
+
 }

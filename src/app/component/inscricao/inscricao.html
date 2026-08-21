@@ -1,12 +1,12 @@
 <div id="div-form">
-    <h2>Inscrição</h2>
+    <h2><strong>Inscrição</strong></h2>
 
-    <form id="form-inscricao" (ngSubmit)="enviaDadosInscricao()">
+    <form id="form-inscricao">
         <label for="atleta">Atleta Cadastrado</label>
         <select name="atleta" [(ngModel)]="atletaId" id="atleta" class="input01" required>
             <option [ngValue]="null">Selecione um atleta cadastrado</option>
             @for (atleta of atletas; track atleta.id) {
-                <option [ngValue]="atleta.id">{{ atleta.nome }} - CPF: {{ atleta.cpf }}</option>
+            <option [ngValue]="atleta.id">{{ atleta.nome }} - CPF: {{ atleta.cpf }}</option>
             }
         </select>
 
@@ -14,18 +14,18 @@
         <select name="corrida" [(ngModel)]="corridaId" id="corrida" class="input01" required>
             <option [ngValue]="null">Selecione uma corrida cadastrada</option>
             @for (corrida of corridas; track corrida.id) {
-                <option [ngValue]="corrida.id">{{ corrida.descricaoCorrida }} - {{ corrida.dataCorrida }}</option>
+            <option [ngValue]="corrida.id">{{ corrida.descricaoCorrida }} - {{ corrida.dataCorrida }}</option>
             }
         </select>
 
-        
+
         <label for="distancia">Distância da Prova</label>
-        <input type="radio" id="5km" name="distancia" value="5KM" [(ngModel)] = "distancia5km"> 5km
-        <input type="radio" id="10km" name="distancia" value="10KM" [(ngModel)] = "distancia10km"> 10km
-        <input type="radio" id="25km" name="distancia" value="25KM" [(ngModel)] = "distancia25km"> 25km
+        <input type="radio" id="5km" name="distancia" value="5KM" [(ngModel)]="distancia5km"> 5km
+        <input type="radio" id="10km" name="distancia" value="10KM" [(ngModel)]="distancia10km"> 10km
+        <input type="radio" id="25km" name="distancia" value="25KM" [(ngModel)]="distancia25km"> 25km
 
         <label for="camiseta-tamanho">Tamanho da Camiseta</label>
-        <select name="camiseta-tamanho" [(ngModel)] = "camisetaTamanho" id="camiseta-tamanho" class="input02" required>
+        <select name="camiseta-tamanho" [(ngModel)]="camisetaTamanho" id="camiseta-tamanho" class="input02" required>
             <option value="">Selecione o tamanho</option>
             <option value="P">P</option>
             <option value="M">M</option>
@@ -34,7 +34,7 @@
         </select>
 
         <label for="faixa-etaria">Categoria / Faixa Etaria</label>
-        <select name="faixa-etaria" [(ngModel)] = "faixaEtaria" id="faixa-etaria" class="input02" required>
+        <select name="faixa-etaria" [(ngModel)]="faixaEtaria" id="faixa-etaria" class="input02" required>
             <option value="">Selecione a categoria</option>
             <option value="Infantil">Infantil</option>
             <option value="Juvenil">Juvenil</option>
@@ -42,11 +42,18 @@
             <option value="Idoso">Idoso</option>
         </select>
         <br><br>
-        <h2>Valor da Inscricão: R$ 89,90</h2>
+        <h2><strong>Valor da Inscricão:</strong></h2>
+        <h3>R$89,90</h3>
+
+        <br>
+
+        <span><strong>Li e aceito os termos do regulamento da prova e declaração de saúde.</strong></span>
+        <br>
+        <input type="checkbox" required />
 
         <div id="div-btns">
-            <button type="submit" id="btnAdd">Cadastrar Atleta</button>
-            <button type="reset" id="btnLimpar">Limpar</button>
+            <button type="submit" id="btnAdd">Finalizar e ir para Pagamento</button>
+
         </div>
     </form>
 

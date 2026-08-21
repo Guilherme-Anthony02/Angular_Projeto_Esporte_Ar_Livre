@@ -24,6 +24,12 @@ input[type=radio]{
     margin: 0px 10px;
 }
 
+input [type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    margin: 0px 10px;
+}
+
 .input01{
     width: 650px;
 }
@@ -49,7 +55,7 @@ button{
 
 #btnAdd{
     margin-right: 10px;
-    background-color: var(--cor-botao1);
+    background-color: rgb(4, 173, 4);
     color: var(--branca);
 }
 
@@ -58,3 +64,8 @@ button{
     background-color: var(--cor-botao2);
     color: var(--branca);
 }
+
+h3{
+    color: rgb(4, 173, 4);
+}
+
