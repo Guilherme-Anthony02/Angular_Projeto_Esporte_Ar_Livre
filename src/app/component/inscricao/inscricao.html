@@ -3,12 +3,22 @@
 
     <form id="form-inscricao" (ngSubmit)="enviaDadosInscricao()">
         <label for="atleta">Atleta Cadastrado</label>
-        <input type="text" name="atleta" [(ngModel)]="atleta" id="atleta" class="input01" required maxlength="80" placeholder="Selecione o atleta (ou digite o CPF)">
-
-        <label for="cpf">Ou Buscar por CPF</label>
-        <input type="text" name="cpf" [(ngModel)]="cpf" id="cpf" class="input02" required maxlength="80" placeholder="000.000.000-00">
+        <select name="atleta" [(ngModel)]="atletaId" id="atleta" class="input01" required>
+            <option [ngValue]="null">Selecione um atleta cadastrado</option>
+            @for (atleta of atletas; track atleta.id) {
+                <option [ngValue]="atleta.id">{{ atleta.nome }} - CPF: {{ atleta.cpf }}</option>
+            }
+        </select>
 
         <label for="corrida">Corrida Escolhida</label>
+        <select name="corrida" [(ngModel)]="corridaId" id="corrida" class="input01" required>
+            <option [ngValue]="null">Selecione uma corrida cadastrada</option>
+            @for (corrida of corridas; track corrida.id) {
+                <option [ngValue]="corrida.id">{{ corrida.descricaoCorrida }} - {{ corrida.dataCorrida }}</option>
+            }
+        </select>
+
+        
         <label for="distancia">Distância da Prova</label>
         <input type="radio" id="5km" name="distancia" value="5KM" [(ngModel)] = "distancia5km"> 5km
         <input type="radio" id="10km" name="distancia" value="10KM" [(ngModel)] = "distancia10km"> 10km
