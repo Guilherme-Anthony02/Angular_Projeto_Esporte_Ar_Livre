@@ -4,7 +4,7 @@ import { HomeComponent } from './component/home-component/home-component';
 import { AtletaComponent } from './component/atleta-component/atleta-component';
 import { CadastroCorrida } from './component/cadastro-corrida/cadastro-corrida';
 import { AtletaListaComponent } from './component/atleta-lista-component/atleta-lista-component';
-import { CorridaListaComponent } from './corrida-lista-component/corrida-lista-component';
+import { CorridaListaComponent } from './component/corrida-lista-component/corrida-lista-component';
 import { Inscricao } from './component/inscricao/inscricao';
 
 

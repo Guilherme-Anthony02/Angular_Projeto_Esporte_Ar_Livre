@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { CorridaService } from '../service/corrida-service';
-import { Corrida } from '../models/Corrida';
+import { CorridaService } from '../../service/corrida-service';
+import { Corrida } from '../../models/Corrida';
 import { Router } from '@angular/router';
 
 @Component({
