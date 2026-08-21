@@ -12,8 +12,12 @@ import { Router } from '@angular/router';
 export class CorridaListaComponent {
 
   listaCorridas = signal<Corrida[]>([])
+ 
 
-  constructor(private corridaService: CorridaService) { }
+  constructor(
+    private corridaService: CorridaService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
     this.listar()
@@ -52,6 +56,10 @@ export class CorridaListaComponent {
 
   }
 
+  carregandoDadosForm(objCorrida: Corrida){
+
+    this.router.navigate(["/alteracorrida", objCorrida.id])
+  }
 
 
 }
