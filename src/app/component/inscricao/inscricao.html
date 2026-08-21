@@ -1,0 +1,43 @@
+<div id="div-form">
+    <h2>Inscrição</h2>
+
+    <form id="form-inscricao" (ngSubmit)="enviaDadosInscricao()">
+        <label for="atleta">Atleta Cadastrado</label>
+        <input type="text" name="atleta" [(ngModel)]="atleta" id="atleta" class="input01" required maxlength="80" placeholder="Selecione o atleta (ou digite o CPF)">
+
+        <label for="cpf">Ou Buscar por CPF</label>
+        <input type="text" name="cpf" [(ngModel)]="cpf" id="cpf" class="input02" required maxlength="80" placeholder="000.000.000-00">
+
+        <label for="corrida">Corrida Escolhida</label>
+        <label for="distancia">Distância da Prova</label>
+        <input type="radio" id="5km" name="distancia" value="5KM" [(ngModel)] = "distancia5km"> 5km
+        <input type="radio" id="10km" name="distancia" value="10KM" [(ngModel)] = "distancia10km"> 10km
+        <input type="radio" id="25km" name="distancia" value="25KM" [(ngModel)] = "distancia25km"> 25km
+
+        <label for="camiseta-tamanho">Tamanho da Camiseta</label>
+        <select name="camiseta-tamanho" [(ngModel)] = "camisetaTamanho" id="camiseta-tamanho" class="input02" required>
+            <option value="">Selecione o tamanho</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+        </select>
+
+        <label for="faixa-etaria">Categoria / Faixa Etaria</label>
+        <select name="faixa-etaria" [(ngModel)] = "faixaEtaria" id="faixa-etaria" class="input02" required>
+            <option value="">Selecione a categoria</option>
+            <option value="Infantil">Infantil</option>
+            <option value="Juvenil">Juvenil</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Idoso">Idoso</option>
+        </select>
+        <br><br>
+        <h2>Valor da inscricão:</h2>
+
+        <div id="div-btns">
+            <button type="submit" id="btnAdd">Cadastrar Atleta</button>
+            <button type="reset" id="btnLimpar">Limpar</button>
+        </div>
+    </form>
+
+</div>
